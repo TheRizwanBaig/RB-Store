@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/RB-Store/static/css/main.e6c13ad2.css",
+    "main.js": "/RB-Store/static/js/main.7ad06bef.js",
+    "index.html": "/RB-Store/index.html",
+    "main.e6c13ad2.css.map": "/RB-Store/static/css/main.e6c13ad2.css.map",
+    "main.7ad06bef.js.map": "/RB-Store/static/js/main.7ad06bef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.7ad06bef.js"
+  ]
+}
