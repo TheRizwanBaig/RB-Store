@@ -13,9 +13,8 @@ import { Link } from "react-router-dom";
 import Skeleton from "@mui/material/Skeleton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import axios from "axios";
-
+import Logo from "./Logo.png";
 const NavBar = () => {
-  
   const [categories, setcategories] = useState([]);
   const [anchorMenu, setAnchorMenu] = React.useState(null);
   const openMenu = Boolean(anchorMenu);
@@ -43,7 +42,7 @@ const NavBar = () => {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar
           position="static"
-          style={{ background: "black", marginBottom: 50 }}
+          style={{ background: "black", marginBottom: 50}}
         >
           <Toolbar>
             <IconButton
@@ -100,27 +99,26 @@ const NavBar = () => {
                 </div>
               )}
             </Menu>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              <Button component={Link} to={"/"} color="inherit">
-                Home
-              </Button>
+            <Typography align="center" variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              <Link to="/">
+                <img alt ="Logo" src={Logo} width="auto" height="70"></img>
+              </Link>
             </Typography>
-            <Button component={Link} to={"/Login"} color="inherit">
+            <Button component={Link} to={"/login"} color="inherit">
               Login
             </Button>
-          
+
             <IconButton
               aria-label="Show cart items"
               size="large"
               edge="end"
               color="inherit"
+              component={Link} to= {"/cart"}
             >
               <Badge badgeContent={2} color="secondary">
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
-        
-        
           </Toolbar>
         </AppBar>
       </Box>

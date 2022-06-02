@@ -1,0 +1,64 @@
+.detailed__container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    }
+    
+    .detailed__card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      background-color: white;
+      width: 80%;
+      min-width: 300px;
+      margin-bottom: 40px;
+      font-family: arial;
+      border-radius: 5px;  
+      padding: 15px;  
+    }
+    .detailed__skeleton {
+      border-radius: 5px;
+    }
+    .detailed__title{
+    text-align: left;
+   
+    padding-left: 7px;
+    padding-right: 7px;
+    }
+    .detailed__pr__cantainer{
+      display: flex;
+      justify-content: flexstart;
+    padding-left: 8px;
+    padding-right: 8px;
+    }
+    .description{
+      margin-left: 40px;
+      margin-top: auto;
+      margin-bottom: auto;
+        padding: 8px;
+    }
+    .input{
+      width: 30px;
+    }
+    .detailed__price {
+      color: rgb(0, 0, 0);
+      font-size: 18px;
+    }
+   
+    
+    .detailed__card button {
+      border: none;
+      outline: 0;
+      padding: 12px;
+      color: white;
+      background-color: #000;
+      text-align: right;
+      cursor: pointer;
+      font-size: 15px;
+      border-radius: 5px;
+      text-transform: uppercase;
+    }
+    
+    .detailed__card button:hover {
+      opacity: 0.7;
+    }
+    

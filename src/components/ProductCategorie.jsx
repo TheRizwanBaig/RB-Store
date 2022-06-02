@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import ProductComponent from "./ProductComponent";
+import Card from "./card/Card";
 import {
   filterProduct,
   removeSelectedProduct,
@@ -39,7 +39,7 @@ const ProductCategorie = () => {
         {category}
       </h1>
 
-      <ProductComponent />
+      <Card />
     </>
   );
 };

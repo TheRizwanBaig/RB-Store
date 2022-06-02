@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import ProductComponent from "./ProductComponent";
 import { setProduct } from "../redux/actions/productActions";
+import Card from "./card/Card";
 
 const ProductList = () => {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const ProductList = () => {
   });
   return (
     <>
-      <ProductComponent />
+      <Card />
     </>
   );
 };

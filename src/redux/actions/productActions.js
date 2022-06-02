@@ -23,3 +23,22 @@ export const removeSelectedProduct = () => {
     type: actionTypes.REVOME_SELECTED_PRODUCT,
   };
 };
+
+export const addCart = (product) => {
+  return {
+    type: actionTypes.ADD_CART,
+    payload: product,
+  };
+};
+export const deleltCart = (id) => {
+  return {
+    type: actionTypes.DELETE_CART,
+    payload: id,
+  };
+};
+export const removeAllCart = (product) => {
+  return {
+    type: actionTypes.REMOVE_ALL_CART,
+    payload: product,
+  };
+};

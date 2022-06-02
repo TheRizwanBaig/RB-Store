@@ -26,7 +26,7 @@ const Login = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <Box sx={{ textAlign: "center", marginTop: 20 }}>
+        <Box sx={{ textAlign: "center", marginTop: 10 , marginBottom: 10}}>
           <h1>Login</h1>
           <Grid>
             <TextField
@@ -59,6 +59,7 @@ const Login = () => {
             >
               Login
             </Button>
+         
           </Grid>
         </Box>
       </form>

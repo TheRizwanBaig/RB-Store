@@ -6,16 +6,9 @@ import {
   removeSelectedProduct,
   selectedProduct,
 } from "../redux/actions/productActions";
-import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+import DetailedItem from './card/DetailedItem'
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
-import Grid from "@mui/material/Grid";
 
 const ProductDetail = () => {
   const product = useSelector((state) => state.product);
@@ -45,52 +38,7 @@ const ProductDetail = () => {
           <CircularProgress color="inherit" />
         </Backdrop>
       ) : (
-          <Grid
-            container
-            spacing={0}
-            direction="column"
-            alignItems="center"
-            justify="center"
-            style={{ minHeight: "100vh" }}
-          >
-            <Grid item xs={12} sm={6} md={3}>
-              <Card elevation={2} sx={{ maxWidth: 945 }}>
-              <CardHeader
-                  title={product.title}
-                  subheader={`
-                          ⭐Rating ${product.rating.rate}`}
-                />
-                <CardActions>
-
-                <CardMedia
-                  style={{
-                    alignItem: "center",
-                    width: "auto",
-                    maxHeight: "300px",
-                    alignItems:"center",
-                  }}
-
-                  component="img"
-                  image={product.image}
-                  alt={product.title}
-                />
-               
-                <CardContent>
-                  <Typography paragraph>Price: {product.price}</Typography>
-                  <Typography paragraph>
-                    Category: {product.category}
-                  </Typography>
-                </CardContent>
-</CardActions>
-                <CardContent>
-
-                  <Typography paragraph>
-                    description:{product.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          </Grid>
+        <DetailedItem />
       )}
     </>
   );
