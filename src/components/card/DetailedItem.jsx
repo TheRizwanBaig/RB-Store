@@ -4,8 +4,6 @@ import "./detailed__item.css";
 
 const DetailedItem = () => {
   const product = useSelector((state) => state.product);
-  console.log(product);
-
   return (
     <div className="detailed__container">
       <div className="detailed__card">
@@ -22,7 +20,7 @@ const DetailedItem = () => {
               Quantity: <input className="input"></input>
             </p>
             <p className="detailed__price">
-              Size: 
+              Size:
               <select id="cars" name="cars">
                 <option value="volvo">S</option>
                 <option value="saab">M</option>
@@ -30,8 +28,51 @@ const DetailedItem = () => {
                 <option value="audi">XL</option>
               </select>
             </p>
+
+            <div class="product-color">
+              <span>Color</span>
+
+              <div class="color-choose">
+                <div>
+                  <input
+                    data-image="red"
+                    type="radio"
+                    id="red"
+                    name="color"
+                    value="red"
+                  />
+                  <label for="red">
+                    <span></span>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    data-image="blue"
+                    type="radio"
+                    id="blue"
+                    name="color"
+                    value="blue"
+                  />
+                  <label for="blue">
+                    <span></span>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    data-image="black"
+                    type="radio"
+                    id="black"
+                    name="color"
+                    value="black"
+                  />
+                  <label for="black">
+                    <span></span>
+                  </label>
+                </div>
+              </div>
+            </div>
             <p className="detailed__price">Price ${product.price}</p>
-            <br/>
+            <br />
             <button>Add to Cart</button>
           </div>
         </div>

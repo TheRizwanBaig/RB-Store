@@ -6,7 +6,7 @@ import SignUp from "./components/SignUp";
 import ProductCategorie from "./components/ProductCategorie";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
-import Cart from "./components/cart/Cart";
+import ProductCart from "./components/ProductCart";
 function App() {
   return (
     <BrowserRouter>
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="login" element={<Login />} />
-        <Route path="cart" element={<Cart />} />
+        <Route path="productCart" element={<ProductCart />} />
         <Route path="signUp" element={<SignUp />} />
         <Route path="products/:productId" element={<ProductDetail />} />
         <Route

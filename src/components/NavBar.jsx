@@ -113,7 +113,7 @@ const NavBar = () => {
               size="large"
               edge="end"
               color="inherit"
-              component={Link} to= {"/cart"}
+              component={Link} to= {"/productCart"}
             >
               <Badge badgeContent={2} color="secondary">
                 <ShoppingCartIcon />

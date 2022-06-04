@@ -61,4 +61,11 @@
     .detailed__card button:hover {
       opacity: 0.7;
     }
+    .product-color {
+      margin-bottom: 30px;
+    }
+     
+    .color-choose div {
+      display: inline-block;
+    }
     

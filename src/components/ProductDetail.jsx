@@ -9,7 +9,7 @@ import {
 import DetailedItem from './card/DetailedItem'
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
-
+import ClotheDetail from "./card/ClotheDetail";
 const ProductDetail = () => {
   const product = useSelector((state) => state.product);
   const { productId } = useParams();
@@ -38,7 +38,9 @@ const ProductDetail = () => {
           <CircularProgress color="inherit" />
         </Backdrop>
       ) : (
-        <DetailedItem />
+        <>
+        <ClotheDetail />
+        </>
       )}
     </>
   );
