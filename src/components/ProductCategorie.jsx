@@ -31,9 +31,9 @@ const ProductCategorie = () => {
     <>
       <h1
         style={{
-          color: "red",
           textAlign: "center",
           textTransform: "uppercase",
+          marginTop: "90px"
         }}
       >
         {category}

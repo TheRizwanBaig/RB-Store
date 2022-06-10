@@ -3,21 +3,14 @@ html,body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, Sans-serif;
-    background-color: #070617;
+  background-color: rgb(219, 219, 219);
   }
-  .dummy_page {
-    height: 200px;
-    width: 100%;
-    background-color: #f0f0f0;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 60px 0px;
-  }
+
   /* STYLES SPECIFIC TO FOOTER  */
   .footer {
     width: 100%;
     position: relative;
-    height: auto;
+    margin-top: auto;
     background-color: black;
   }
   .footer .col {

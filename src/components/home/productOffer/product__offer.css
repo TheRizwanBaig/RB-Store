@@ -1,0 +1,17 @@
+.product__offer {
+    margin: 90px 0;
+}
+.product__offer .po__h1{
+    text-align: center;
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: large;
+}
+.product__offer .cards__container{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}

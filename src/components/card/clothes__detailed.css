@@ -84,7 +84,7 @@
     opacity: 1;
     border: 1px solid lightseagreen;
 }
-.box .cart{
+.box .add_btn{
     background-color: rgb(44, 44, 44);
     color: white;
     outline: none;

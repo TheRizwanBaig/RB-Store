@@ -1,0 +1,21 @@
+.checkout__container {
+  background-color: white;
+  max-width: 800px;
+  width: 100%;
+  margin: 10px auto;
+  box-shadow: 0 0 5px rgb(76, 75, 75);
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+.checkout__container .TextField {
+  width: 280px;
+  margin: 10px;
+}
+.confirm{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}

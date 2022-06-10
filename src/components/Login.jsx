@@ -25,8 +25,8 @@ const Login = () => {
   };
   return (
     <>
+        <Box sx={{ textAlign: "center", marginTop: 20 , minHeight: "48vh"}}>
       <form onSubmit={handleSubmit}>
-        <Box sx={{ textAlign: "center", marginTop: 10 , marginBottom: 10}}>
           <h1>Login</h1>
           <Grid>
             <TextField
@@ -61,8 +61,8 @@ const Login = () => {
             </Button>
          
           </Grid>
-        </Box>
       </form>
+        </Box>
     </>
   );
 };

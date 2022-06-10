@@ -24,10 +24,22 @@ export const removeSelectedProduct = () => {
   };
 };
 
-export const addCart = (product) => {
+export const addToCart = (cartProduct) => {
   return {
-    type: actionTypes.ADD_CART,
-    payload: product,
+    type: actionTypes.ADD_TO_CART,
+    payload: cartProduct,
+  };
+};
+export const incCart = (inc) => {
+  return {
+    type: actionTypes.INC_CART,
+    payload: inc,
+  };
+};
+export const decCart = (dec) => {
+  return {
+    type: actionTypes.DEC_CART,
+    payload: dec,
   };
 };
 export const deleltCart = (id) => {
@@ -36,9 +48,8 @@ export const deleltCart = (id) => {
     payload: id,
   };
 };
-export const removeAllCart = (product) => {
+export const removeAllCart = () => {
   return {
     type: actionTypes.REMOVE_ALL_CART,
-    payload: product,
   };
 };

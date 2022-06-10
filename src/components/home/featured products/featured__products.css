@@ -1,0 +1,16 @@
+.featured__products__container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.featured__products__container .fp__h1 {
+  text-align: center;
+  color: white;
+    background-color: black;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: large;
+}
+.featured__products__container .product__container {
+  width: 90%;
+  margin: 0 auto;
+}

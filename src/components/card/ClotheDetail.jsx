@@ -1,10 +1,15 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/actions/productActions";
 import "./clothes__detailed.css";
 
 const ClotheDetail = () => {
   const [size, setSize] = React.useState("");
   const product = useSelector((state) => state.product);
+  const cartProducts = useSelector((state) => state.cartProduct.cartProducts);
+
+  const dispatch = useDispatch();
 
   console.log(size);
   return (
@@ -44,17 +49,36 @@ const ClotheDetail = () => {
             >
               <h3>L</h3>
             </div>
-            <div className={size === "Xlarge" ? "active" : "size"} 
-            onClick={()=> {
-                setSize("Xlarge")
-            }}>
-            <h3>XL</h3>
+            <div
+              className={size === "Xlarge" ? "active" : "size"}
+              onClick={() => {
+                setSize("Xlarge");
+              }}
+            >
+              <h3>XL</h3>
             </div>
           </div>
-          <button className="cart">Add to cart</button>
+          <button
+            className="add_btn"
+            onClick={() => {
+                      const prod = {
+                        id: product.id,
+                        image: product.image,
+                        price: product.price,
+                        title: product.title,
+                        quantity: 1,
+                      };
+                      if (cartProducts.length !== 0) {
+                        const dupe = cartProducts.find(obj => obj.id === prod.id);
+                        return dupe ? cartProducts : dispatch(addToCart([...cartProducts, prod]));
+                      } else {dispatch(addToCart([...cartProducts, prod]));}
+                      
+                    }}
+          >
+            Add to cart
+          </button>
         </div>
         <span>${product.price}</span>
-
       </div>
     </div>
   );
