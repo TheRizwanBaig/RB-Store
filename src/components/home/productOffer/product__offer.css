@@ -1,17 +1,51 @@
 .product__offer {
+    padding :50px 0;
     margin: 90px 0;
 }
-.product__offer .po__h1{
+.product__offer .product__offe__heading{
+    color: black;
     text-align: center;
-    color: white;
-    background-color: black;
+    font-size: xx-large;
+    margin-bottom: 20px;
+    font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: large;
 }
-.product__offer .cards__container{
-    margin: 0 auto;
+
+.product__offer .product__offer__box__container{
     width: 80%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
+}
+
+.product__offer__box__container .product__offer__box{
+    margin: 5px;
+    max-width: 350px;
+    min-width: 350px;
+    border: 2px solid black;
+
+}
+.product__offer__box .product__offer__box__header{
+
+}
+.product__offer__box .product__offer__box__icon{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.product__offer__box__header .product__offer__box__icon__h2{
+    text-align: center;
+    border-bottom: 5px solid black;
+}
+.product__offer__box__header .product__offer__box__icon__h2 h2{
+    color: rgb(171, 47, 47) ;
+}
+.product__offer__box .product__offer__box__text {
+    margin: 20px;
+}
+.product__offer__box .product__offer__box__text p{
+    font-size: large;
+    color: rgb(171, 47, 47) ;
+    text-align: justify;
+
 }

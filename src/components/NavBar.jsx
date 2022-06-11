@@ -50,19 +50,23 @@ const NavBar = () => {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1, marginBottom: 9 }}>
-        <AppBar position="fixed" style={{ background: "black" }}>
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar
+          position="fixed"
+          color="transparent"
+          sx={{ backdropFilter: "blur(20px)" }}
+        >
           <Toolbar>
             <IconButton
               size="large"
               edge="start"
-              color="inherit"
               aria-label="menu"
               sx={{ mr: 2 }}
               aria-controls={openMenu ? "basic-menu" : undefined}
               aria-haspopup="true"
               aria-expanded={openMenu ? "true" : undefined}
               onClick={handleMenuClick}
+              style={{ color: "red" }}
             >
               <MenuIcon />
             </IconButton>
@@ -129,9 +133,15 @@ const NavBar = () => {
               <Divider />
               <Divider />
               <Divider />
-              <MenuItem sx={{ m: 1 }}><FacebookOutlinedIcon/> Facebook  </MenuItem>
-              <MenuItem sx={{ m: 1 }}><InstagramIcon /> instagram</MenuItem>
-              <MenuItem sx={{ m: 1 }}><LinkedInIcon /> LinkedIn</MenuItem>
+              <MenuItem sx={{ m: 1 }}>
+                <FacebookOutlinedIcon /> Facebook{" "}
+              </MenuItem>
+              <MenuItem sx={{ m: 1 }}>
+                <InstagramIcon /> instagram
+              </MenuItem>
+              <MenuItem sx={{ m: 1 }}>
+                <LinkedInIcon /> LinkedIn
+              </MenuItem>
               <Divider />
             </Menu>
             <Typography
@@ -144,7 +154,12 @@ const NavBar = () => {
                 <img alt="Logo" src={Logo} width="auto" height="70"></img>
               </Link>
             </Typography>
-            <Button component={Link} to={"/login"} color="inherit">
+            <Button
+              style={{ color: "red" }}
+              component={Link}
+              to={"/login"}
+              color="inherit"
+            >
               Login
             </Button>
 
@@ -152,9 +167,9 @@ const NavBar = () => {
               aria-label="Show cart items"
               size="large"
               edge="end"
-              color="inherit"
               component={Link}
               to={"/productCart"}
+              style={{ color: "red" }}
             >
               <Badge badgeContent={cartProducts.length} color="secondary">
                 <ShoppingCartIcon />

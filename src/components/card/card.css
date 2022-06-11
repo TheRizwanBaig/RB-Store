@@ -3,7 +3,7 @@
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   width: 90%;
   margin: 0 auto;
 }
@@ -11,14 +11,14 @@
 .card {
   box-shadow: 0 4px 8px 0 rgba(63, 63, 63, 0.33);
   background-color: white;
-  max-width: 260px;
-  min-width: 260px;
+  max-width: 300px;
+  min-width: 300px;
   overflow: hidden;
   /* margin: auto; */
-  font-family: arial;
-  border-radius: 4px;
+  /* font-family: arial; */
+  border-radius: 5px;
   cursor: pointer;
-  margin: 10px;
+  margin: 7px;
   padding: 10px;
 }
 .skeleton {
@@ -35,22 +35,26 @@
   min-height: 50px;
   padding-left: 7px;
   padding-right: 7px;
+  font-size: large;
+  font-weight: normal;
 }
 .pr__cantainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 8px;
+  width: 90%;
+  margin:auto;
 }
 
 .price {
   color: grey;
-  font-size: 18px;
+  font-size: medium;
   width: 45%;
+  text-align: left
 }
 .rating {
   color: grey;
-  font-size: 18px;
+  font-size: medium;
   text-align: right;
   width: 45%;
 }
@@ -65,7 +69,7 @@
   cursor: pointer;
   width: 100%;
   font-size: 18px;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .card button:hover {

@@ -4,23 +4,19 @@ import products from "../img/products.jpg";
 const ProductsAndServices = () => {
   return (
     <div className="ps">
-      <div className="ps__h1">
-        <h1>Products and Services</h1>
-      </div>
+      <div className="ps__h1"></div>
       <div className="ps__container">
         <div className="ps__detailes__container">
           <div className="ps__image">
             <img src={products} alt="products" />
           </div>
           <div className="ps__detailes">
-            <h2>What We Offer?</h2>
+            <div className="ps__text">What We Offer?</div>
             <p>
-              Since its founding in 1964, ORIX has developed a dynamic and
-              diversified portfolio offering a broad range of services. ORIX is
-              a leader in numerous domains including leasing, corporate finance,
-              industrial/ICT equipment, environment and energy,
-              automobile-related, real estate-related, private equity investment
-              and concession, banking and life insurance businesses.
+              RB Digital has developed a dynamic and diversified store offering
+              a broad range of products. RB Digital is providing a very
+              user-friendly user interface in which you can easily find your
+              desired fulfilled products.
             </p>
           </div>
         </div>

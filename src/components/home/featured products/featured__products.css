@@ -1,16 +1,16 @@
 .featured__products__container {
+  padding: 0 0 40px 0;
   text-align: center;
   margin-bottom: 30px;
 }
 .featured__products__container .fp__h1 {
   text-align: center;
-  color: white;
-    background-color: black;
+  color:rgb(0,0,0,0.8);
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: large;
 }
 .featured__products__container .product__container {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }

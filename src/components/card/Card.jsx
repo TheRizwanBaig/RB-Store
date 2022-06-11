@@ -39,14 +39,14 @@ const Card = () => {
                     <img
                       src={product.image}
                       alt={product.title}
-                      style={{ width: "auto", height: "100px", padding: "5px" }}
+                      style={{ width: "auto", height: "200px", padding: "5px" }}
                     />
                   </div>
 
-                  <h4 className="title">{product.title}</h4>
+                  <div className="title">{product.title}</div>
                   <div className="pr__cantainer">
                     <p className="price">${product.price}</p>
-                    <p className="rating">⭐Rating{product.rating.rate}</p>
+                    <p className="rating">⭐ {product.rating.rate}</p>
                   </div>
                 </div>
                 <p>

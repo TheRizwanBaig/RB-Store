@@ -4,6 +4,7 @@ import "react-slideshow-image/dist/styles.css";
 import "./home.css";
 import FeaturedProducts from "./featured products/FeaturedProducts";
 import ProductsAndServices from "./p&S/ProductsAndServices";
+import VBaner from "./vbaner/VBaner";
 import ProductOffer from "./productOffer/ProductOffer";
 import image1 from "./img/image1.jpg";
 import image2 from "./img/image2.jpg";
@@ -18,27 +19,34 @@ const Home = () => {
       <div>
         <Slide easing="ease">
           <div className="each-slide">
-            <div style={{ backgroundImage: `url(${slideImages[0]})` }}></div>
+            <div
+            className="banner__image"
+              style={{
+                backgroundImage: `url(${slideImages[0]})`,
+              }}
+            ></div>
           </div>
 
           <div className="each-slide">
-            <div style={{ backgroundImage: `url(${slideImages[1]})` }}></div>
+            <div             className="banner__image" 
+            style={{ backgroundImage: `url(${slideImages[1]})` }}></div>
           </div>
 
           <div className="each-slide">
-            <div style={{ backgroundImage: `url(${slideImages[2]})` }}></div>
+            <div className="banner__image" style={{ backgroundImage: `url(${slideImages[2]})` }}></div>
           </div>
 
           <div className="each-slide">
-            <div style={{ backgroundImage: `url(${slideImages[3]})` }}></div>
+            <div className="banner__image" style={{ backgroundImage: `url(${slideImages[3]})` }}></div>
           </div>
 
           <div className="each-slide">
-            <div style={{ backgroundImage: `url(${slideImages[4]})` }}></div>
+            <div className="banner__image" style={{ backgroundImage: `url(${slideImages[4]})` }}></div>
           </div>
         </Slide>
       </div>
       <FeaturedProducts />
+      <VBaner />
       <ProductsAndServices />
       <ProductOffer />
     </>
