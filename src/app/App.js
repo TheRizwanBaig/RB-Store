@@ -7,6 +7,7 @@ import ProductCategorie from "../components/ProductCategorie";
 import Home from "../components/home/Home";
 import Footer from "../components/Footer";
 import ProductCart from "../components/ProductCart";
+import ProductList from "../components/ProductList";
 import Checkout from "../components/cart/Checkout";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="signUp" element={<SignUp />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="products/:productId" element={<ProductDetail />} />
+        <Route path="productlist" element={<ProductList />} />
         <Route
           path="products/category/:category"
           element={<ProductCategorie />}

@@ -54,7 +54,7 @@ const NavBar = () => {
         <AppBar
           position="fixed"
           color="transparent"
-          sx={{ backdropFilter: "blur(20px)" }}
+          sx={{ backdropFilter: "blur(30px)" }}
         >
           <Toolbar>
             <IconButton
@@ -89,6 +89,23 @@ const NavBar = () => {
                 },
               }}
             >
+              <Divider />
+              <Divider />
+              <Divider />
+              <Typography variant="h5">Products</Typography>
+              <Divider />
+              <Divider />
+              <Divider />
+              <div>
+                <MenuItem
+                  component={Link}
+                  to={`/productlist`}
+                  onClick={handleMenuClose}
+                  sx={{ m: 1 }}
+                >
+                  All Products
+                </MenuItem>
+              </div>
               <Divider />
               <Divider />
               <Divider />
@@ -157,7 +174,7 @@ const NavBar = () => {
             <Button
               style={{ color: "red" }}
               component={Link}
-              to={"/login"}
+              to="/login"
               color="inherit"
             >
               Login
@@ -168,7 +185,7 @@ const NavBar = () => {
               size="large"
               edge="end"
               component={Link}
-              to={"/productCart"}
+              to="/productCart"
               style={{ color: "red" }}
             >
               <Badge badgeContent={cartProducts.length} color="secondary">

@@ -16,12 +16,13 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;  
 }
 
 .product__offer__box__container .product__offer__box{
     margin: 5px;
-    max-width: 350px;
-    min-width: 350px;
+    max-width: 320px;
+    min-width: 320px;
     border: 2px solid black;
 
 }
@@ -46,6 +47,6 @@
 .product__offer__box .product__offer__box__text p{
     font-size: large;
     color: rgb(171, 47, 47) ;
-    text-align: justify;
+    text-align: center;
 
 }
