@@ -14,3 +14,17 @@
   width: 100%;
   margin: 0 auto;
 }
+
+@media only screen and (max-width: 400px){
+  .featured__products__container {
+    padding: 0 0 15px 0;
+    margin-bottom: 10px;
+  }
+  .featured__products__container .fp__h1 {
+    text-align: center;
+    color:rgb(0,0,0,0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: small;
+  }
+}

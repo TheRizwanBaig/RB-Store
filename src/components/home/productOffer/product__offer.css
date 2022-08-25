@@ -50,3 +50,26 @@
     text-align: center;
 
 }
+@media only screen and (max-width: 400px){
+    .product__offer {
+        padding :25px 0;
+        margin: 25px 0;
+    }
+    .product__offer .product__offe__heading{
+        font-size: x-large;
+        margin-bottom: 15px;
+    }
+    .product__offer__box__container .product__offer__box{
+        margin: 8px;
+        max-width: 270px;
+        min-width: 270px;
+    
+    }
+    .product__offer__box .product__offer__box__text {
+        margin: 10px;
+    }
+    .product__offer__box .product__offer__box__text p{
+        font-size: medium;
+    
+    }
+}

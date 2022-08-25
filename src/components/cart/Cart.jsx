@@ -2,6 +2,7 @@ import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
@@ -16,6 +17,8 @@ import "./cart.css";
 const Cart = () => {
   const cartProducts = useSelector((state) => state.cartProduct.cartProducts);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   let totalAmount = 0;
 
   const total = () => {
@@ -35,7 +38,7 @@ const Cart = () => {
         return (
           <div key={ind} className="cart__container">
             <div className="cart__details">
-              <div className="cart__image">
+              <div className="cart__image" onClick={() => navigate(`/products/${product.id}`)}>
                 <img src={product.image} alt={product.title} />
               </div>
               <div className="cart__box">

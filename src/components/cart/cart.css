@@ -1,5 +1,5 @@
 .cart{
-    min-height: 57vh;
+    min-height: 53vh;
     margin-top: 90px;
 }
 .cart__h{
@@ -32,6 +32,7 @@
     min-width: 160px;
     overflow: hidden;
     margin: 25px;
+    cursor: pointer;
 }
 
 .cart__image img{

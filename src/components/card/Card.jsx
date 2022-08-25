@@ -22,7 +22,7 @@ const Card = () => {
           {skeleton.map((curVal, ind) => {
             return (
               <div key={ind} className="skeleton">
-                <Skeleton variant="rectangular" height={290} width={280} />
+                <Skeleton variant="rectangular" className="skeleton" />
                 <Skeleton />
                 <Skeleton />
               </div>
@@ -39,7 +39,6 @@ const Card = () => {
                     <img
                       src={product.image}
                       alt={product.title}
-                      style={{ width: "auto", height: "200px", padding: "5px" }}
                     />
                   </div>
 
@@ -49,7 +48,6 @@ const Card = () => {
                     <p className="rating">⭐ {product.rating.rate}</p>
                   </div>
                 </div>
-                <p>
                   <button
                     onClick={() => {
                       const prod = {
@@ -68,7 +66,6 @@ const Card = () => {
                   >
                     Add to Cart
                   </button>
-                </p>
               </div>
             );
           })}

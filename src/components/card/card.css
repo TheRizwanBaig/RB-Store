@@ -18,16 +18,25 @@
   /* font-family: arial; */
   border-radius: 5px;
   cursor: pointer;
-  margin: 7px;
+  margin: 0 0 29px 0;
   padding: 10px;
 }
 .skeleton {
-  border-radius: 4px;
-  margin: 10px;
+  border-radius: 5px;
+  max-width: 300px;
+  min-width: 300px;
+  max-height: 280px;
+  min-height: 280px;
 }
 .img {
   display: flex;
   justify-content: center;
+}
+.img img{
+  width: auto;
+height: 200px;
+padding: 5px ;
+                        
 }
 .title {
   text-align: center;
@@ -74,4 +83,101 @@
 
 .card button:hover {
   opacity: 0.7;
+}
+.search__bar{
+  display: flex;
+  width: 43%;
+  margin-bottom: 27px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 690px){
+  .card {
+    max-width: 220px;
+    min-width: 220px;
+    margin: 0 0 20px 0;
+    padding: 10px;
+  }
+  .skeleton {
+    border-radius: 5px;
+    max-width: 220px;
+    min-width: 220px;
+    max-height: 190px;
+    min-height: 190px;
+  }
+  .img img{
+  width: auto;
+  height: 150px;
+  padding: 5px ;
+                          
+  }
+  .title {
+    text-align: center;
+    max-height: 50px;
+    min-height: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: medium;
+    overflow: hidden;
+  }
+  .price {
+    font-size: small;
+    width: 35%;
+  }
+  .rating {
+    font-size: small;
+    width: 35%;
+  }
+  .card button {
+    padding: 8px;
+    font-size: 14px;
+  }
+  .search__bar{
+    width: 84%;
+  }
+}
+@media only screen and (max-width: 400px){
+  .card {
+    max-width: 155px;
+    min-width: 155px;
+    margin: 0 0 10px 0;
+    padding: 6px;
+  }
+  .skeleton {
+    border-radius: 5px;
+    max-width: 155px;
+    min-width: 155px;
+    max-height: 150px;
+    min-height: 150px;
+  }
+  .img img{
+  width: auto;
+  height: 100px;
+  padding: 1px ;
+                          
+  }
+  .title {
+    text-align: center;
+    max-height: 30px;
+    min-height: 30px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: smaller;
+    overflow: hidden;
+  }
+  .price {
+    font-size: x-small;
+    width: 30%;
+  }
+  .rating {
+    font-size: x-small;
+    width: 30%;
+  }
+  .card button {
+    padding: 4px;
+    font-size: 12px;
+  }
+  .search__bar{
+    width: 88%;
+  }
 }

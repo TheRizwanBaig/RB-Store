@@ -6,10 +6,11 @@ import {
   removeSelectedProduct,
   selectedProduct,
 } from "../redux/actions/productActions";
-import DetailedItem from './card/DetailedItem'
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
 import ClotheDetail from "./card/ClotheDetail";
+import "./product__detail.css"
+
 const ProductDetail = () => {
   const product = useSelector((state) => state.product);
   const { productId } = useParams();
@@ -29,7 +30,7 @@ const ProductDetail = () => {
   }, [productId]);
 
   return (
-    <>
+    <div className="product__detailed">
       {Object.keys(product).length === 0 ? (
         <Backdrop
           sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
@@ -42,7 +43,7 @@ const ProductDetail = () => {
         <ClotheDetail />
         </>
       )}
-    </>
+    </div>
   );
 };
 

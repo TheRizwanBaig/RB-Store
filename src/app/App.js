@@ -9,10 +9,12 @@ import Footer from "../components/Footer";
 import ProductCart from "../components/ProductCart";
 import ProductList from "../components/ProductList";
 import Checkout from "../components/cart/Checkout";
+import ScrollToTop from "../components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />

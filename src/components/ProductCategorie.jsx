@@ -59,17 +59,10 @@ const ProductCategorie = () => {
         {category}
       </h1>
       <Paper
+          className="search__bar"
+
         component="form"
-        sx={{
-          p: "2px 4px",
-          display: "flex",
-          maxWidth: "670px" ,
-          minWidth: "5px" ,
-          marginBottom: 5,
-          marginLeft: "auto",
-          marginRight: "auto",
-          justifyContent: "center",
-        }}
+      
       >
         <InputBase
           sx={{ ml: 1, flex: 1 }}
@@ -91,9 +84,12 @@ const ProductCategorie = () => {
             label="Age"
             onChange={(e) => setSorted(e.target.value)}
           >
-            <MenuItem value="title">A-Z</MenuItem>
-            <MenuItem value="price">Price</MenuItem>
-            <MenuItem value="rating.rate">Rating</MenuItem>
+             <MenuItem value="AZ">A-Z</MenuItem>
+          <MenuItem value="ZA">Z-A</MenuItem>
+          <MenuItem value="priceLowHigh">Price low-high</MenuItem>
+          <MenuItem value="priceHighLow">Price high-low</MenuItem>
+          <MenuItem value="ratingHighLow">Rating high-low</MenuItem>
+          <MenuItem value="ratingLowHigh">Rating low-high</MenuItem>
           </Select>
         </FormControl>
       </Paper>
@@ -104,7 +100,7 @@ const ProductCategorie = () => {
             {skeleton.map((curVal, ind) => {
               return (
                 <div key={ind} className="skeleton">
-                  <Skeleton variant="rectangular" height={290} width={280} />
+                  <Skeleton variant="rectangular" className="skeleton" />
                   <Skeleton />
                   <Skeleton />
                 </div>
@@ -125,17 +121,26 @@ const ProductCategorie = () => {
               })
               .sort((a, b) => {
                 if (sorted === "") {
-                  return a;
-                } else if (sorted === "title" && a.title > b.title) {
-                  return 1;
-                } else if (sorted === "price" && a.price > b.price) {
-                  return 1;
-                } else if (
-                  sorted === "rating.rate" &&
-                  a.rating.rate < b.rating.rate
-                ) {
-                  return 1;
-                } else return -1;
+                return a;
+              } else if (sorted === "AZ" && a.title > b.title) {
+                return 1;
+              } else if (sorted === "ZA" && a.title < b.title) {
+                return 1;
+              } else if (sorted === "priceLowHigh" && a.price > b.price) {
+                return 1;
+              } else if (sorted === "priceHighLow" && a.price < b.price) {
+                return 1;
+              } else if (
+                sorted === "ratingHighLow" &&
+                a.rating.rate < b.rating.rate
+              ) {
+                return 1;
+              } else if (
+                sorted === "ratingLowHigh" &&
+                a.rating.rate > b.rating.rate
+              ) {
+                return 1;
+              } else return -1;
               })
               .map((product) => {
                 return (
@@ -145,11 +150,6 @@ const ProductCategorie = () => {
                         <img
                           src={product.image}
                           alt={product.title}
-                          style={{
-                            width: "auto",
-                            height: "200px",
-                            padding: "5px",
-                          }}
                         />
                       </div>
 
@@ -159,7 +159,6 @@ const ProductCategorie = () => {
                         <p className="rating">⭐ {product.rating.rate}</p>
                       </div>
                     </div>
-                    <p>
                       <button
                         onClick={() => {
                           const prod = {
@@ -183,7 +182,6 @@ const ProductCategorie = () => {
                       >
                         Add to Cart
                       </button>
-                    </p>
                   </div>
                 );
               })}
